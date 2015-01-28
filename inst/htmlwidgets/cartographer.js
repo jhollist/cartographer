@@ -26,6 +26,9 @@ HTMLWidgets.widget({
 
     var map = d3.carto.map();
     div.call(map);
+    //Playing with projections
+    map.mode("projection");
+    map.projection(d3.geo.albersUsa());
 
     parseLayers(x, map);
 
